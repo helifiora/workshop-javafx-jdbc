@@ -29,7 +29,7 @@ public class DepartmentFormController implements Initializable {
 
 	private DepartmentService service;
 
-	private List<DataChangeListener> dataChangeListeners = new ArrayList();
+	private List<DataChangeListener> dataChangeListeners = new ArrayList<>();
 
 	@FXML
 	private TextField txtID;
@@ -63,7 +63,7 @@ public class DepartmentFormController implements Initializable {
 
 		} catch (DbException e) {
 			Alerts.showAlert("Error saving object", null, e.getMessage(), AlertType.ERROR);
-		} catch(ValidationException e) {
+		} catch (ValidationException e) {
 			setErrorMessages(e.getErrors());
 		}
 	}
